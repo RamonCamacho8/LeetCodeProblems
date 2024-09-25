@@ -4,14 +4,36 @@
  * @return {boolean}
  */
 var wordBreak = function(s, wordDict) {
+    const memo = new Map();
 
-    const wordSet = new Set(wordDict);
-    
-    for (let i = 0; i < wordSet.length; i++) {
-
-        if (s.startsWith(wordSet[i])) {
-             
+    const helper = function(s) {
+        if (s.length === 0) {
+            return true;
         }
+        
+        if (memo.has(s)) {
+            return memo.get(s);
+        }
+
+        for (const word of wordDict) {
+            if (s.startsWith(word)) {
+                const remainingString = s.slice(word.length);
+                if (helper(remainingString)) {
+                    memo.set(s, true);
+                    return true;
+                }
+            }
+        }
+
+        memo.set(s, false);
+        return false;
     }
-    
+
+    return helper(s);
 };
+
+const s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
+const wordDict = ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"];
+
+console.log(wordBreak(s,wordDict));
+
