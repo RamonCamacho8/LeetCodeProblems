@@ -77,24 +77,6 @@ class WordDictionary {
 
 module.exports = WordDictionary;
 
-let wordDictionary = new WordDictionary();
-wordDictionary.addWord("at");
-wordDictionary.addWord("and");
-wordDictionary.addWord("an");
-wordDictionary.addWord("add");
-
-wordDictionary.printSearch("a"); //     False
-wordDictionary.printSearch(".at"); //    False
-
-wordDictionary.addWord("bat");
-
-wordDictionary.printSearch(".at"); //   True
-wordDictionary.printSearch("an."); //   True
-wordDictionary.printSearch("a.d."); //  false
-wordDictionary.printSearch("b."); //    false
-wordDictionary.printSearch("a.d"); //   true
-wordDictionary.printSearch("."); //     false */
-
 
 
 
