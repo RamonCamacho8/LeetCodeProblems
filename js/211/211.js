@@ -73,10 +73,6 @@ class WordDictionary {
         return true;
     }
 
-    printSearch(word){
-        console.log("Matches for:  " + word + " -> " + this.search(word));
-    }
-    
 }
 
 module.exports = WordDictionary;
