@@ -79,6 +79,8 @@ class WordDictionary {
     
 }
 
+module.exports = WordDictionary;
+
 let wordDictionary = new WordDictionary();
 wordDictionary.addWord("at");
 wordDictionary.addWord("and");

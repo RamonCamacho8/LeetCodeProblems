@@ -1,4 +1,4 @@
-const Trie = require('../../problems/208/208');
+const Trie = require('./208');
 
 test('test case 1', () => {
   let trie = new Trie();

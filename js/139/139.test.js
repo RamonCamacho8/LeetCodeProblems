@@ -1,4 +1,4 @@
-const wordBreak = require("../../problems/139/139");
+const wordBreak = require("./139");
 
 test("test case 1", () => {
   const s = "leetcode";
