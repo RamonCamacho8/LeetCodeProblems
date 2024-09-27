@@ -15,6 +15,4 @@ var twoSum = function(nums, target) {
     }
 };
 
-//twoSum([3, 3], 6)
-
 module.exports = twoSum;
