@@ -54,14 +54,5 @@ class Trie {
     }
 }
 
-let trie = new Trie();
-trie.insert("apple");
-console.log(trie.search("apple"));   // return True
-console.log(trie.search("app"));     // return False
-console.log(trie.startsWith("app")); // return True
-trie.insert("app");
-trie.search("app");
-
-
-
+module.exports = Trie;
 
